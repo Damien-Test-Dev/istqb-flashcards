@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0B1220">
+
+  <title>ISTQB Flashcards (FR) — Offline</title>
+
+  <!-- PWA (général) -->
+  <link rel="manifest" href="./manifest.json">
+
+  <!-- iOS "Add to Home Screen" -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div id="app" class="app">
+
+    <!-- HOME -->
+    <section id="screenHome" class="screen screen--active" aria-label="Home">
+      <header class="topbar">
+        <div class="topbar__title">
+          <div class="logoDot" aria-hidden="true"></div>
+          <div>
+            <div class="h1">ISTQB Flashcards (FR)</div>
+            <div class="sub">Tap/clic sur une carte = suivante • Offline après 1re visite</div>
+          </div>
+        </div>
+      </header>
+
+      <main class="home">
+        <div id="deckGrid" class="deckGrid" role="list"></div>
+      </main>
+
+      <footer class="footer">
+        <div id="netStatus" class="pill" aria-live="polite">…</div>
+        <div class="pill pill--muted">Version <span id="ver"></span></div>
+      </footer>
+    </section>
+
+    <!-- DECK -->
+    <section id="screenDeck" class="screen" aria-label="Deck">
+      <header class="topbar topbar--deck">
+        <button id="btnHome" class="btn" type="button" aria-label="Home">Home</button>
+
+        <div class="deckHeader">
+          <div id="deckTitle" class="deckTitle">Deck</div>
+          <div id="progress" class="progress">0 / 0</div>
+        </div>
+
+        <div class="spacer" aria-hidden="true"></div>
+      </header>
+
+      <main class="deck">
+        <article id="card" class="card" role="button" tabindex="0" aria-label="Carte. Tap ou clic pour passer à la suivante.">
+          <div class="card__title" id="cardTitle">…</div>
+
+          <div class="card__imageWrap" aria-hidden="true">
+            <div id="cardImage" class="card__image"></div>
+          </div>
+
+          <div id="cardBody" class="card__body"></div>
+
+          <div class="card__hint">Tap/clic sur la carte → suivante</div>
+        </article>
+      </main>
+    </section>
+
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
