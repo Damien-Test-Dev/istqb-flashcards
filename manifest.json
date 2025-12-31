@@ -1,0 +1,9 @@
+{
+  "name": "ISTQB Flashcards (FR) Offline",
+  "short_name": "ISTQB Cards",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0B1220",
+  "theme_color": "#0B1220",
+  "lang": "fr"
+}
